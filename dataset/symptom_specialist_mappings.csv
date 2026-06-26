@@ -1,0 +1,501 @@
+symptom,specialist,urgency_level
+Ear pain,ENT,medium
+Hearing loss,ENT,medium
+Tinnitus,ENT,low
+Nasal congestion,ENT,low
+Runny nose,ENT,low
+Sneezing,ENT,low
+Nosebleed,ENT,medium
+Sore throat,ENT,low
+Hoarseness,ENT,low
+Voice loss,ENT,medium
+Difficulty swallowing,ENT,medium
+Ear discharge,ENT,medium
+Ear itching,ENT,low
+Ear fullness,ENT,low
+Hearing ringing,ENT,low
+Nasal polyps,ENT,medium
+Loss of smell,ENT,medium
+Loss of taste,ENT,medium
+Throat clearing,ENT,low
+Post-nasal drip,ENT,low
+Swollen tonsils,ENT,medium
+Tonsillar abscess,ENT,high
+Ear canal blockage,ENT,medium
+Sinusitis pain,ENT,medium
+Facial pressure,ENT,medium
+Nasal dryness,ENT,low
+Nasal bleeding both nostrils,ENT,high
+Chronic cough with throat clearing,ENT,low
+Lump in throat sensation,ENT,medium
+Neck mass,ENT,high
+Snoring,ENT,low
+Sleep apnea symptoms,ENT,medium
+Vertigo,ENT,medium
+Dizziness with ear pain,ENT,medium
+Balance issues,ENT,medium
+Fluid in ear,ENT,medium
+Perforated eardrum,ENT,medium
+Swollen lymph nodes in neck,ENT,medium
+Laryngitis,ENT,low
+Throat ulcers,ENT,medium
+Nasal septum deviation,ENT,low
+Chronic sinusitis,ENT,medium
+Ear tube blockage,ENT,medium
+Parotid gland swelling,ENT,medium
+Jaw clicking with ear pain,ENT,low
+Throat dryness,ENT,low
+Recurrent ear infections,ENT,medium
+Nasal crust formation,ENT,low
+Foreign body in ear,ENT,high
+Foreign body in nose,ENT,high
+Eardrum pain,ENT,medium
+Enlarged adenoids,ENT,medium
+Bleeding tonsils,ENT,high
+Throat pain radiating to ear,ENT,medium
+Unilateral hearing loss,ENT,high
+Sudden deafness,ENT,high
+Toothache,Dentist,medium
+Tooth sensitivity,Dentist,low
+Bleeding gums,Dentist,medium
+Swollen gums,Dentist,medium
+Bad breath,Dentist,low
+Loose teeth,Dentist,medium
+Chipped tooth,Dentist,medium
+Cracked tooth,Dentist,medium
+Tooth abscess,Dentist,high
+Jaw pain,Dentist,medium
+Gum recession,Dentist,medium
+Mouth ulcers,Dentist,medium
+Dry mouth,Dentist,low
+Tooth discoloration,Dentist,low
+Missing teeth,Dentist,low
+Broken dental filling,Dentist,medium
+Wisdom tooth pain,Dentist,medium
+Impacted wisdom tooth,Dentist,high
+Teeth grinding,Dentist,low
+Clicking jaw,Dentist,low
+Mouth sores,Dentist,medium
+Painful chewing,Dentist,medium
+Gum boil,Dentist,medium
+Pus from gums,Dentist,high
+Swollen jaw,Dentist,high
+Dental cavity pain,Dentist,medium
+Tooth erosion,Dentist,medium
+Tongue pain,Dentist,medium
+White patches in mouth,Dentist,medium
+Red patches in mouth,Dentist,medium
+Burning mouth,Dentist,medium
+Facial swelling from tooth,Dentist,high
+Loose dental crown,Dentist,medium
+Lost dental crown,Dentist,medium
+Gum inflammation,Dentist,medium
+Mouth pain,Dentist,medium
+Sensitive gums,Dentist,low
+Black spots on teeth,Dentist,medium
+Receding gums with pain,Dentist,medium
+Difficulty opening mouth,Dentist,medium
+Tooth root pain,Dentist,high
+Jaw locking,Dentist,high
+Dental bridge pain,Dentist,medium
+Denture pain,Dentist,medium
+Cheek biting pain,Dentist,low
+Salivary gland pain near jaw,Dentist,medium
+Bleeding after tooth extraction,Dentist,high
+Dry socket after extraction,Dentist,high
+Swollen lip from dental issue,Dentist,medium
+Tooth pain at night,Dentist,medium
+Chest pain,Cardiologist,high
+Palpitations,Cardiologist,high
+Shortness of breath on exertion,Cardiologist,high
+Irregular heartbeat,Cardiologist,high
+Rapid heart rate,Cardiologist,high
+Slow heart rate,Cardiologist,high
+Chest tightness,Cardiologist,high
+Heart fluttering,Cardiologist,medium
+Swollen ankles,Cardiologist,medium
+Swollen legs,Cardiologist,medium
+Leg pain on walking,Cardiologist,medium
+Cold hands and feet,Cardiologist,medium
+Bluish lips,Cardiologist,high
+Fainting,Cardiologist,high
+Near fainting,Cardiologist,high
+Dizziness on standing,Cardiologist,medium
+High blood pressure,Cardiologist,high
+Low blood pressure with dizziness,Cardiologist,high
+Chest pressure,Cardiologist,high
+Pain radiating to left arm,Cardiologist,high
+Jaw pain with chest pain,Cardiologist,high
+Neck pain with chest tightness,Cardiologist,high
+Night sweats with palpitations,Cardiologist,medium
+Fatigue with breathlessness,Cardiologist,medium
+Rapid pulse at rest,Cardiologist,high
+Skipped heartbeats,Cardiologist,medium
+Heart racing at night,Cardiologist,medium
+Ankle swelling with breathlessness,Cardiologist,high
+Coughing at night while lying down,Cardiologist,medium
+Blue fingernails,Cardiologist,high
+Sudden weight gain with swelling,Cardiologist,high
+Reduced exercise tolerance,Cardiologist,medium
+Heart murmur symptoms,Cardiologist,medium
+Pulsating sensation in neck,Cardiologist,medium
+Feeling of impending doom,Cardiologist,high
+Pain between shoulder blades,Cardiologist,high
+Profuse sweating with chest pain,Cardiologist,high
+Nausea with chest tightness,Cardiologist,high
+Vomiting with chest pain,Cardiologist,high
+Back pain radiating to chest,Cardiologist,high
+Shortness of breath at rest,Cardiologist,high
+Lightheadedness during exercise,Cardiologist,high
+Extreme fatigue after mild activity,Cardiologist,medium
+Visible neck vein pulsation,Cardiologist,medium
+Breathing difficulty lying flat,Cardiologist,high
+Severe headache,Neurologist,high
+Migraine,Neurologist,medium
+Seizures,Neurologist,high
+Numbness in hands,Neurologist,medium
+Numbness in feet,Neurologist,medium
+Tingling in limbs,Neurologist,medium
+Weakness in one side,Neurologist,high
+Facial drooping,Neurologist,high
+Slurred speech,Neurologist,high
+Memory loss,Neurologist,high
+Confusion,Neurologist,high
+Tremors,Neurologist,medium
+Balance problems,Neurologist,medium
+Coordination issues,Neurologist,medium
+Double vision,Neurologist,high
+Blurred vision suddenly,Neurologist,high
+Sudden loss of vision,Neurologist,high
+Severe dizziness,Neurologist,high
+Loss of consciousness,Neurologist,high
+Chronic daily headache,Neurologist,medium
+Head pain with light sensitivity,Neurologist,medium
+Head pain with sound sensitivity,Neurologist,medium
+Stiff neck with fever,Neurologist,high
+Sudden worst headache of life,Neurologist,high
+Progressive weakness,Neurologist,high
+Muscle stiffness,Neurologist,medium
+Involuntary movements,Neurologist,medium
+Difficulty walking,Neurologist,medium
+Burning sensation in limbs,Neurologist,medium
+Electric shock sensation,Neurologist,medium
+Restless legs at night,Neurologist,low
+Word finding difficulty,Neurologist,high
+Forgetting recent events,Neurologist,high
+Personality changes,Neurologist,high
+Excessive daytime sleepiness,Neurologist,medium
+Sleep paralysis,Neurologist,medium
+Sudden jerking movements,Neurologist,high
+Loss of bladder control,Neurologist,high
+Progressive vision loss,Neurologist,high
+Hearing loss with dizziness,Neurologist,medium
+Ringing ears with headache,Neurologist,medium
+Sudden difficulty understanding speech,Neurologist,high
+Face pain,Neurologist,medium
+Facial numbness,Neurologist,high
+Difficulty swallowing with weakness,Neurologist,high
+Optic nerve pain,Neurologist,high
+Eye pain with headache,Neurologist,medium
+Pins and needles both feet,Neurologist,medium
+Inability to control arm movements,Neurologist,high
+Rigidity in muscles,Neurologist,medium
+Back pain,Orthopedic,medium
+Knee pain,Orthopedic,medium
+Hip pain,Orthopedic,medium
+Shoulder pain,Orthopedic,medium
+Ankle pain,Orthopedic,medium
+Wrist pain,Orthopedic,medium
+Elbow pain,Orthopedic,medium
+Neck pain,Orthopedic,medium
+Foot pain,Orthopedic,medium
+Joint swelling,Orthopedic,medium
+Bone fracture,Orthopedic,high
+Sports injury,Orthopedic,medium
+Muscle cramps,Orthopedic,low
+Stiffness in joints,Orthopedic,medium
+Limited range of motion,Orthopedic,medium
+Clicking joints,Orthopedic,low
+Popping knees,Orthopedic,medium
+Torn ligament symptoms,Orthopedic,high
+Sciatica pain,Orthopedic,medium
+Herniated disc symptoms,Orthopedic,high
+Spinal stenosis symptoms,Orthopedic,medium
+Scoliosis,Orthopedic,medium
+Flat feet pain,Orthopedic,low
+Heel pain,Orthopedic,medium
+Plantar fasciitis,Orthopedic,medium
+Carpal tunnel symptoms,Orthopedic,medium
+Tennis elbow,Orthopedic,medium
+Golfer's elbow,Orthopedic,medium
+Rotator cuff pain,Orthopedic,medium
+Frozen shoulder,Orthopedic,medium
+Dislocated shoulder,Orthopedic,high
+Knee locking,Orthopedic,high
+ACL injury symptoms,Orthopedic,high
+Meniscus tear symptoms,Orthopedic,medium
+Bone pain at rest,Orthopedic,high
+Crepitus in knee,Orthopedic,medium
+Hip clicking,Orthopedic,low
+Lower back radiating to leg,Orthopedic,medium
+Neck pain radiating to arm,Orthopedic,medium
+Muscle weakness after injury,Orthopedic,medium
+Numbness after back injury,Orthopedic,high
+Swollen knee after fall,Orthopedic,high
+Pain after joint replacement,Orthopedic,high
+Stress fracture pain,Orthopedic,medium
+Shin splints,Orthopedic,medium
+Achilles tendon pain,Orthopedic,medium
+Bunion pain,Orthopedic,medium
+Hammer toe,Orthopedic,low
+Bone spur pain,Orthopedic,medium
+Growth plate injury,Orthopedic,high
+Acne,Dermatologist,low
+Rash,Dermatologist,medium
+Itchy skin,Dermatologist,low
+Eczema flare-up,Dermatologist,medium
+Psoriasis,Dermatologist,medium
+Hives,Dermatologist,medium
+Skin redness,Dermatologist,low
+Skin peeling,Dermatologist,low
+Dry skin,Dermatologist,low
+Oily skin,Dermatologist,low
+Dark spots on skin,Dermatologist,low
+Mole changes,Dermatologist,high
+New skin growth,Dermatologist,medium
+Warts,Dermatologist,low
+Fungal skin infection,Dermatologist,medium
+Ringworm,Dermatologist,medium
+Athlete's foot,Dermatologist,low
+Nail discoloration,Dermatologist,medium
+Brittle nails,Dermatologist,low
+Ingrown toenail,Dermatologist,medium
+Hair loss,Dermatologist,medium
+Scalp itching,Dermatologist,low
+Dandruff,Dermatologist,low
+Scalp psoriasis,Dermatologist,medium
+Seborrheic dermatitis,Dermatologist,low
+Skin tags,Dermatologist,low
+Cysts under skin,Dermatologist,medium
+Boils,Dermatologist,medium
+Cellulitis,Dermatologist,high
+Impetigo,Dermatologist,medium
+Urticaria,Dermatologist,medium
+Vitiligo,Dermatologist,low
+Melasma,Dermatologist,low
+Sunburn,Dermatologist,low
+Chemical burn on skin,Dermatologist,high
+Blistering skin,Dermatologist,high
+Skin ulcer,Dermatologist,high
+Varicose vein skin changes,Dermatologist,medium
+Spider veins,Dermatologist,low
+Stretch marks,Dermatologist,low
+Excessive sweating,Dermatologist,low
+Rosacea,Dermatologist,low
+Pityriasis rosea,Dermatologist,low
+Allergic contact dermatitis,Dermatologist,medium
+Sebaceous cyst,Dermatologist,low
+Blackheads,Dermatologist,low
+Pustules on skin,Dermatologist,medium
+Nodular skin lesion,Dermatologist,high
+Irregular mole,Dermatologist,high
+Itchy scalp with hair loss,Dermatologist,medium
+Depression,Psychiatrist,high
+Anxiety,Psychiatrist,medium
+Panic attacks,Psychiatrist,high
+Mood swings,Psychiatrist,medium
+Insomnia,Psychiatrist,medium
+Excessive sleeping,Psychiatrist,medium
+Suicidal thoughts,Psychiatrist,high
+Hallucinations,Psychiatrist,high
+Delusions,Psychiatrist,high
+Social withdrawal,Psychiatrist,medium
+Loss of interest in activities,Psychiatrist,medium
+Obsessive thoughts,Psychiatrist,medium
+Compulsive behaviors,Psychiatrist,medium
+Eating disorder symptoms,Psychiatrist,high
+Binge eating,Psychiatrist,medium
+Excessive fear,Psychiatrist,medium
+Phobias,Psychiatrist,medium
+PTSD symptoms,Psychiatrist,high
+Flashbacks,Psychiatrist,high
+Nightmares recurrent,Psychiatrist,medium
+Anger outbursts,Psychiatrist,medium
+Self-harm urges,Psychiatrist,high
+Substance abuse,Psychiatrist,high
+Alcohol dependence,Psychiatrist,high
+Drug craving,Psychiatrist,high
+Paranoia,Psychiatrist,high
+Feeling of worthlessness,Psychiatrist,high
+Difficulty concentrating,Psychiatrist,medium
+Memory problems from stress,Psychiatrist,medium
+Emotional numbness,Psychiatrist,medium
+Persistent sadness,Psychiatrist,high
+Manic episodes,Psychiatrist,high
+Grandiosity,Psychiatrist,high
+Rapid speech with racing thoughts,Psychiatrist,high
+Psychosis symptoms,Psychiatrist,high
+Fear of leaving home,Psychiatrist,medium
+Excessive worry,Psychiatrist,medium
+Hyperventilation from anxiety,Psychiatrist,medium
+Social anxiety,Psychiatrist,medium
+Performance anxiety,Psychiatrist,medium
+Attention deficit symptoms,Psychiatrist,medium
+Hyperactivity in adults,Psychiatrist,medium
+Autism spectrum concerns,Psychiatrist,medium
+Dissociation episodes,Psychiatrist,high
+Identity disturbance,Psychiatrist,high
+Impulsivity,Psychiatrist,medium
+Hoarding behavior,Psychiatrist,medium
+Body image distortion,Psychiatrist,high
+Agoraphobia,Psychiatrist,medium
+Somatic complaints without cause,Psychiatrist,medium
+Chronic cough,Pulmonologist,medium
+Wheezing,Pulmonologist,high
+Shortness of breath,Pulmonologist,high
+Coughing blood,Pulmonologist,high
+Chest tightness with breathing,Pulmonologist,high
+Breathlessness at night,Pulmonologist,high
+Rapid breathing,Pulmonologist,high
+Noisy breathing,Pulmonologist,medium
+Persistent phlegm,Pulmonologist,medium
+Yellow sputum,Pulmonologist,medium
+Green sputum,Pulmonologist,high
+Blood-streaked sputum,Pulmonologist,high
+Chronic bronchitis symptoms,Pulmonologist,medium
+Asthma attack,Pulmonologist,high
+COPD symptoms,Pulmonologist,high
+Difficulty breathing on exertion,Pulmonologist,medium
+Reduced oxygen levels,Pulmonologist,high
+Bluish lips during breathing,Pulmonologist,high
+Breathing pain on one side,Pulmonologist,high
+Night cough,Pulmonologist,medium
+Morning cough with phlegm,Pulmonologist,medium
+Smoke-related breathing issues,Pulmonologist,medium
+Dust allergy breathing problems,Pulmonologist,medium
+Occupational breathing difficulty,Pulmonologist,medium
+Recurrent pneumonia,Pulmonologist,high
+Lung infection symptoms,Pulmonologist,high
+Pleural effusion symptoms,Pulmonologist,high
+Hiccups with breathing difficulty,Pulmonologist,medium
+Barrel chest,Pulmonologist,medium
+Chronic fever with cough,Pulmonologist,high
+Weight loss with cough,Pulmonologist,high
+Night sweats with cough,Pulmonologist,high
+Tuberculosis symptoms,Pulmonologist,high
+Persistent dry cough,Pulmonologist,medium
+Productive cough more than 3 weeks,Pulmonologist,high
+Snoring with breathlessness,Pulmonologist,medium
+Post-COVID breathing issues,Pulmonologist,medium
+Unexplained hypoxia,Pulmonologist,high
+Lung nodule follow-up,Pulmonologist,medium
+Interstitial lung disease symptoms,Pulmonologist,high
+Pulmonary fibrosis symptoms,Pulmonologist,high
+Pulmonary hypertension symptoms,Pulmonologist,high
+Exercise-induced breathlessness,Pulmonologist,medium
+Feeling of air hunger,Pulmonologist,high
+Difficulty exhaling fully,Pulmonologist,medium
+Prolonged expiration,Pulmonologist,medium
+Tracheal deviation symptoms,Pulmonologist,high
+Lung collapse symptoms,Pulmonologist,high
+Drowning-related breathing issues,Pulmonologist,high
+Fever,General Physician,medium
+Fatigue,General Physician,medium
+General weakness,General Physician,medium
+Unexplained weight loss,General Physician,high
+Unexplained weight gain,General Physician,medium
+Loss of appetite,General Physician,medium
+Excessive thirst,General Physician,medium
+Frequent urination,General Physician,medium
+Nausea,General Physician,medium
+Vomiting,General Physician,medium
+Diarrhea,General Physician,medium
+Constipation,General Physician,low
+Bloating,General Physician,low
+Stomach pain,General Physician,medium
+Abdominal cramps,General Physician,medium
+Indigestion,General Physician,low
+Heartburn,General Physician,low
+Acid reflux,General Physician,low
+Flatulence,General Physician,low
+Yellow eyes,General Physician,high
+Yellow skin,General Physician,high
+Pale skin,General Physician,medium
+Dark urine,General Physician,high
+Blood in urine,General Physician,high
+Blood in stool,General Physician,high
+Burning urination,General Physician,medium
+Frequent infections,General Physician,medium
+Recurrent fever,General Physician,medium
+Chills,General Physician,medium
+Night sweats,General Physician,medium
+Swollen lymph nodes general,General Physician,medium
+Itching all over body,General Physician,medium
+Rash with fever,General Physician,medium
+Sore throat with fever,General Physician,medium
+Body aches,General Physician,medium
+Joint pain with fever,General Physician,medium
+Headache with fever,General Physician,high
+Persistent low-grade fever,General Physician,medium
+High fever above 103F,General Physician,high
+Cold and flu symptoms,General Physician,low
+Dehydration symptoms,General Physician,medium
+Poor sleep,General Physician,low
+Increased hunger,General Physician,low
+Mood changes with fatigue,General Physician,medium
+General malaise,General Physician,medium
+Hair thinning,General Physician,low
+Brittle nails with fatigue,General Physician,low
+Feeling cold all the time,General Physician,low
+Puffiness on face in morning,General Physician,medium
+Difficulty concentrating with fatigue,General Physician,medium
+Sudden high fever with shivering,General Physician,high
+Chronic ear wax buildup,ENT,low
+Nose bridge pain,ENT,medium
+Deviated nasal septum breathing,ENT,medium
+Teeth sensitivity to cold,Dentist,low
+Teeth sensitivity to hot,Dentist,medium
+Broken molar,Dentist,medium
+Bleeding after eating,Dentist,medium
+Loose baby tooth in adult,Dentist,low
+Exertional chest pain,Cardiologist,high
+Postural hypotension,Cardiologist,medium
+Arm numbness with chest pain,Cardiologist,high
+Cardiac arrest history,Cardiologist,high
+Racing heart with sweating,Cardiologist,high
+Aura before headache,Neurologist,medium
+Photophobia,Neurologist,medium
+Phonophobia,Neurologist,medium
+Transient vision loss,Neurologist,high
+Weakness after sleep,Neurologist,medium
+Coccyx pain,Orthopedic,medium
+Tailbone injury pain,Orthopedic,medium
+Groin pain with walking,Orthopedic,medium
+Knee giving way,Orthopedic,high
+Painful arc shoulder movement,Orthopedic,medium
+Nail pitting,Dermatologist,low
+Scaly patches on scalp,Dermatologist,medium
+Erythema nodosum,Dermatologist,medium
+Granuloma on skin,Dermatologist,medium
+Painful skin lumps,Dermatologist,medium
+Persistent guilt,Psychiatrist,high
+Emotional dysregulation,Psychiatrist,high
+Intrusive thoughts,Psychiatrist,medium
+Avoidance behavior,Psychiatrist,medium
+Low self-esteem severely affecting life,Psychiatrist,high
+Cough after eating,Pulmonologist,medium
+Breathing difficulty in cold air,Pulmonologist,medium
+Chronic allergic cough,Pulmonologist,medium
+Hemoptysis,Pulmonologist,high
+Reduced breath sounds,Pulmonologist,high
+Recurrent urinary tract infection,General Physician,medium
+Sudden vision change with diabetes,General Physician,high
+Thyroid swelling,General Physician,medium
+Generalised oedema,General Physician,high
+Diabetic symptoms initial,General Physician,high
+Pre-travel vaccination advice,General Physician,low
+Routine health check-up,General Physician,low
+Chest infection without breathlessness,General Physician,medium
+Food poisoning,General Physician,medium
+Ear pressure with altitude,ENT,low
+Post-nasal drip with cough,ENT,low

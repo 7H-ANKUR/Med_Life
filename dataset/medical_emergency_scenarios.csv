@@ -1,0 +1,301 @@
+symptom_description,severity_score,recommended_action,recommended_specialist,emergency_flag
+Crushing chest pain radiating to left arm with sweating,10,Call emergency services immediately and chew aspirin,Cardiologist,true
+Sudden cardiac arrest with no pulse,10,Start CPR immediately and call emergency services,Cardiologist,true
+Severe chest pain with shortness of breath and nausea,10,Call emergency services immediately,Cardiologist,true
+Rapid irregular heartbeat with loss of consciousness,10,Call emergency services and begin CPR if unresponsive,Cardiologist,true
+Chest tightness with jaw pain and cold sweat,9,Call emergency services immediately,Cardiologist,true
+Heart palpitations with fainting and low blood pressure,9,Call emergency services immediately,Cardiologist,true
+Sudden severe chest pressure with vomiting,9,Call emergency services immediately,Cardiologist,true
+Acute chest pain lasting more than 20 minutes,9,Call emergency services immediately,Cardiologist,true
+Ventricular fibrillation detected on home monitor,10,Call emergency services immediately and use AED if available,Cardiologist,true
+Severe breathlessness with pink frothy sputum,10,Call emergency services immediately,Cardiologist,true
+Chest pain with sudden drop in blood pressure,10,Call emergency services immediately,Cardiologist,true
+New onset atrial fibrillation with dizziness,8,Go to emergency room immediately,Cardiologist,true
+Palpitations with syncope in young athlete,9,Call emergency services immediately,Cardiologist,true
+Aortic dissection symptoms with tearing back pain,10,Call emergency services immediately,Cardiologist,true
+Severe ankle swelling with extreme breathlessness at rest,8,Go to emergency room immediately,Cardiologist,true
+Cardiac tamponade with muffled heart sounds and hypotension,10,Call emergency services immediately,Cardiologist,true
+Hypertensive crisis with blood pressure above 200/120,9,Go to emergency room immediately,Cardiologist,true
+Chest pain with ST elevation on ECG,10,Call emergency services immediately,Cardiologist,true
+Sudden death of heartbeat sensation followed by dizziness,9,Call emergency services immediately,Cardiologist,true
+Severe leg pain with blue discoloration after cardiac history,8,Go to emergency room immediately,Cardiologist,true
+Sudden severe headache described as worst of life,10,Call emergency services immediately,Neurologist,true
+Facial drooping with arm weakness and slurred speech,10,Call emergency services immediately - possible stroke,Neurologist,true
+Seizure lasting more than 5 minutes,10,Call emergency services immediately,Neurologist,true
+Sudden loss of consciousness with convulsions,10,Call emergency services immediately,Neurologist,true
+Sudden inability to speak or understand speech,10,Call emergency services immediately - stroke suspected,Neurologist,true
+Transient ischemic attack with temporary vision loss,9,Go to emergency room immediately,Neurologist,true
+Meningitis symptoms with stiff neck high fever and rash,10,Call emergency services immediately,Neurologist,true
+Sudden severe dizziness with inability to stand or walk,9,Call emergency services immediately,Neurologist,true
+Progressive weakness in both legs over hours,9,Go to emergency room immediately,Neurologist,true
+Status epilepticus with continuous seizure activity,10,Call emergency services immediately,Neurologist,true
+Sudden paralysis of one side of body,10,Call emergency services immediately,Neurologist,true
+Sudden double vision with severe headache,9,Go to emergency room immediately,Neurologist,true
+Encephalitis symptoms with confusion and high fever,10,Call emergency services immediately,Neurologist,true
+Spinal cord compression with sudden leg weakness,10,Go to emergency room immediately,Neurologist,true
+Subarachnoid hemorrhage with thunderclap headache,10,Call emergency services immediately,Neurologist,true
+Loss of bladder control with leg numbness after fall,9,Go to emergency room immediately,Neurologist,true
+Sudden onset of psychosis with severe headache,9,Go to emergency room immediately,Neurologist,true
+Brain herniation signs with unequal pupils,10,Call emergency services immediately,Neurologist,true
+Unexplained coma with no response to stimuli,10,Call emergency services immediately,Neurologist,true
+Severe migraine with neurological deficits,8,Go to emergency room immediately,Neurologist,true
+Complete inability to breathe with blue lips,10,Call emergency services immediately,Pulmonologist,true
+Severe asthma attack not responding to inhaler,10,Call emergency services immediately,Pulmonologist,true
+Massive hemoptysis coughing large amounts of blood,10,Call emergency services immediately,Pulmonologist,true
+Tension pneumothorax with absent breath sounds,10,Call emergency services immediately,Pulmonologist,true
+Anaphylaxis with throat swelling and breathing difficulty,10,Administer epinephrine and call emergency services,Pulmonologist,true
+Acute respiratory distress with oxygen saturation below 88%,10,Call emergency services immediately,Pulmonologist,true
+Foreign body aspiration with complete airway obstruction,10,Perform Heimlich maneuver and call emergency services,Pulmonologist,true
+Severe pulmonary embolism with sudden breathlessness and chest pain,10,Call emergency services immediately,Pulmonologist,true
+Epiglottitis with drooling and severe difficulty swallowing,10,Call emergency services immediately,Pulmonologist,true
+Drowning-related breathing difficulty after water rescue,10,Call emergency services immediately,Pulmonologist,true
+Smoke inhalation with respiratory distress,9,Call emergency services immediately,Pulmonologist,true
+Laryngospasm with sudden inability to inhale,10,Call emergency services immediately,Pulmonologist,true
+COPD exacerbation with severe breathlessness at rest,9,Call emergency services immediately,Pulmonologist,true
+Breathing rate above 30 per minute with confusion,9,Call emergency services immediately,Pulmonologist,true
+Severe allergic reaction with bronchospasm,10,Administer epinephrine and call emergency services,Pulmonologist,true
+Respiratory failure in known COVID-19 patient,10,Call emergency services immediately,Pulmonologist,true
+Pneumothorax with sudden sharp chest pain and breathlessness,9,Go to emergency room immediately,Pulmonologist,true
+Severe pneumonia with altered consciousness,9,Call emergency services immediately,Pulmonologist,true
+Oxygen saturation dropping to 85% during exercise,8,Go to emergency room immediately,Pulmonologist,true
+Tracheal deviation with respiratory distress,10,Call emergency services immediately,Pulmonologist,true
+Open fracture with bone visible through skin,10,Call emergency services and do not move the patient,Orthopedic,true
+Spinal injury with loss of sensation below neck after accident,10,Call emergency services and immobilize spine,Orthopedic,true
+Severe pelvic fracture with internal bleeding signs,10,Call emergency services immediately,Orthopedic,true
+Femur fracture with significant blood loss,10,Call emergency services immediately,Orthopedic,true
+Traumatic amputation with uncontrolled bleeding,10,Apply tourniquet and call emergency services immediately,Orthopedic,true
+Dislocated hip with loss of circulation below injury,9,Call emergency services immediately,Orthopedic,true
+Knee dislocation with vascular compromise,10,Call emergency services immediately,Orthopedic,true
+Compartment syndrome with severe limb pain and tightness,9,Go to emergency room immediately,Orthopedic,true
+Crush injury to limb with no sensation,9,Call emergency services immediately,Orthopedic,true
+Cervical spine fracture with neck pain after diving accident,10,Call emergency services and immobilize neck,Orthopedic,true
+Multiple rib fractures with breathing difficulty,9,Call emergency services immediately,Orthopedic,true
+Skull fracture with clear fluid from ear,10,Call emergency services immediately,Orthopedic,true
+Shoulder dislocation with neurovascular compromise,8,Go to emergency room immediately,Orthopedic,true
+Severe ankle fracture-dislocation with skin tenting,9,Call emergency services immediately,Orthopedic,true
+Bilateral leg fractures after high-velocity trauma,10,Call emergency services immediately,Orthopedic,true
+Forearm fracture with absent radial pulse,9,Call emergency services immediately,Orthopedic,true
+Sternal fracture with underlying cardiac injury suspicion,10,Call emergency services immediately,Orthopedic,true
+Traumatic joint dislocation with nerve injury symptoms,8,Go to emergency room immediately,Orthopedic,true
+Open knee joint injury with exposed cartilage,9,Call emergency services immediately,Orthopedic,true
+Pathological fracture from bone tumor,8,Go to emergency room immediately,Orthopedic,true
+Stevens-Johnson syndrome with widespread blistering,10,Call emergency services immediately,Dermatologist,true
+Toxic epidermal necrolysis with skin sloughing,10,Call emergency services immediately,Dermatologist,true
+Rapidly spreading cellulitis with red streaks and fever,9,Go to emergency room immediately,Dermatologist,true
+Necrotizing fasciitis with black discoloration of skin,10,Call emergency services immediately,Dermatologist,true
+Anaphylactic skin reaction with hives and throat tightness,10,Administer epinephrine and call emergency services,Dermatologist,true
+Severe burn covering more than 20% of body surface,10,Call emergency services immediately,Dermatologist,true
+Chemical burn to face and eyes,10,Flush with water and call emergency services,Dermatologist,true
+Rapidly expanding hematoma after minor trauma,8,Go to emergency room immediately,Dermatologist,true
+Meningococcal rash not fading with glass test,10,Call emergency services immediately,Dermatologist,true
+Gangrenous tissue with foul odor and systemic fever,10,Call emergency services immediately,Dermatologist,true
+Electrical burn with entry and exit wounds,10,Call emergency services immediately,Dermatologist,true
+Full thickness burn to hand with white leathery appearance,9,Go to emergency room immediately,Dermatologist,true
+Pemphigus vulgaris with widespread mucosal blistering,9,Go to emergency room immediately,Dermatologist,true
+Severe drug hypersensitivity reaction with systemic symptoms,9,Go to emergency room immediately,Dermatologist,true
+Erythroderma covering entire body with fever,9,Go to emergency room immediately,Dermatologist,true
+Deep infected wound with red streaking up the limb,9,Go to emergency room immediately,Dermatologist,true
+Frostbite with black tissue and complete numbness,9,Go to emergency room immediately,Dermatologist,true
+Severe urticaria with angioedema of lips and tongue,9,Administer epinephrine and call emergency services,Dermatologist,true
+Rapidly worsening infected diabetic foot ulcer,8,Go to emergency room immediately,Dermatologist,true
+Spontaneous skin hemorrhage with fever and low platelets,9,Go to emergency room immediately,Dermatologist,true
+Foreign body completely blocking airway in child,10,Perform Heimlich maneuver and call emergency services,ENT,true
+Severe tonsillar abscess with inability to swallow or breathe,9,Go to emergency room immediately,ENT,true
+Ludwig's angina with floor of mouth swelling,10,Call emergency services immediately,ENT,true
+Mastoid abscess with meningitis signs,10,Call emergency services immediately,ENT,true
+Epistaxis uncontrolled for more than 20 minutes,8,Go to emergency room immediately,ENT,true
+Deep space neck infection with airway compromise,10,Call emergency services immediately,ENT,true
+Sudden total hearing loss in both ears,9,Go to emergency room immediately,ENT,true
+Acute labyrinthitis with inability to stand,8,Go to emergency room immediately,ENT,true
+Fractured larynx after blunt neck trauma,10,Call emergency services immediately,ENT,true
+Massive neck hematoma compressing airway,10,Call emergency services immediately,ENT,true
+Retropharyngeal abscess with stridor in child,10,Call emergency services immediately,ENT,true
+Severe facial trauma with airway compromise,10,Call emergency services immediately,ENT,true
+Penetrating neck injury with expanding hematoma,10,Call emergency services immediately,ENT,true
+Epiglottitis with tripod positioning and drooling,10,Call emergency services immediately,ENT,true
+Acute otitis media with facial nerve palsy,9,Go to emergency room immediately,ENT,true
+Sudden sensorineural hearing loss in one ear,7,Go to emergency room within 24 hours,ENT,true
+Post-tonsillectomy hemorrhage with active bleeding,9,Go to emergency room immediately,ENT,true
+Parapharyngeal abscess with trismus and fever,9,Go to emergency room immediately,ENT,true
+Chemical ingestion causing throat burns,10,Call emergency services immediately,ENT,true
+Severe vertigo with vomiting and inability to move,7,Go to emergency room immediately,ENT,true
+Dental abscess with cellulitis spreading to neck,9,Go to emergency room immediately,Dentist,true
+Avulsed permanent tooth after trauma,8,Replace tooth in socket and see dentist within 30 minutes,Dentist,true
+Jaw fracture after trauma with malocclusion,9,Go to emergency room immediately,Dentist,true
+Severe post-extraction bleeding not stopping with pressure,8,Go to emergency room immediately,Dentist,true
+Dental abscess with fever and difficulty breathing,9,Go to emergency room immediately,Dentist,true
+Facial swelling from tooth abscess spreading rapidly,9,Go to emergency room immediately,Dentist,true
+Mouth floor swelling from infected lower molar,10,Call emergency services immediately,Dentist,true
+Severe oral bleeding from gum laceration,8,Go to emergency room immediately,Dentist,true
+Broken jaw with airway concern,10,Call emergency services immediately,Dentist,true
+Local anesthetic reaction with swelling and difficulty breathing,10,Call emergency services immediately,Dentist,true
+Tooth luxation with airway risk in child,8,Go to emergency room immediately,Dentist,true
+Dentoalveolar fracture with multiple mobile teeth after trauma,8,Go to emergency room immediately,Dentist,true
+Osteonecrosis of jaw with exposed bone and systemic infection,8,Go to emergency room immediately,Dentist,true
+Severe trismus preventing mouth opening due to infection,8,Go to emergency room immediately,Dentist,true
+Pericoronitis with systemic fever and lymph node swelling,7,Go to emergency room immediately,Dentist,true
+Drug-induced gingival overgrowth blocking airway in child,9,Call emergency services immediately,Dentist,true
+Oral cancer with rapidly enlarging mass causing swallowing difficulty,8,Go to emergency room immediately,Dentist,true
+Massive oral hemorrhage from tongue laceration,9,Call emergency services immediately,Dentist,true
+Dental trauma with suspected concussion,7,Go to emergency room immediately,Dentist,true
+Infected tooth with blood poisoning signs,9,Call emergency services immediately,Dentist,true
+Active suicidal attempt with self-inflicted wounds,10,Call emergency services immediately,Psychiatrist,true
+Acute psychosis with danger to self or others,10,Call emergency services immediately,Psychiatrist,true
+Violent manic episode with inability to control behavior,9,Call emergency services immediately,Psychiatrist,true
+Severe overdose from intentional medication ingestion,10,Call emergency services immediately,Psychiatrist,true
+Catatonic state with complete unresponsiveness,9,Call emergency services immediately,Psychiatrist,true
+Severe self-harm with deep lacerations requiring suturing,9,Call emergency services immediately,Psychiatrist,true
+Acute alcohol poisoning with unconsciousness,10,Call emergency services immediately,Psychiatrist,true
+Substance overdose with pinpoint pupils and slowed breathing,10,Administer naloxone if available and call emergency services,Psychiatrist,true
+Acute severe panic attack with chest pain and fainting,8,Go to emergency room immediately,Psychiatrist,true
+Serotonin syndrome with high fever confusion and tremors,10,Call emergency services immediately,Psychiatrist,true
+Neuroleptic malignant syndrome with rigidity and hyperthermia,10,Call emergency services immediately,Psychiatrist,true
+Active homicidal ideation with a specific plan,10,Call emergency services immediately,Psychiatrist,true
+Severe eating disorder with cardiac arrhythmia,10,Call emergency services immediately,Psychiatrist,true
+Acute delirium tremens with seizures,10,Call emergency services immediately,Psychiatrist,true
+Drug-induced psychosis with aggression and paranoia,9,Call emergency services immediately,Psychiatrist,true
+Severe postpartum psychosis with infant harm risk,10,Call emergency services immediately,Psychiatrist,true
+Lithium toxicity with tremors and altered consciousness,9,Call emergency services immediately,Psychiatrist,true
+Acute benzodiazepine withdrawal with seizures,10,Call emergency services immediately,Psychiatrist,true
+Dissociative fugue state with self-neglect,8,Go to emergency room immediately,Psychiatrist,true
+Severe anorexia with weight dangerously low requiring hospitalization,9,Go to emergency room immediately,Psychiatrist,true
+High fever above 104F with convulsions,10,Call emergency services immediately,General Physician,true
+Diabetic ketoacidosis with altered consciousness,10,Call emergency services immediately,General Physician,true
+Severe hypoglycemia with loss of consciousness,10,Administer glucose and call emergency services,General Physician,true
+Septic shock with low blood pressure and high fever,10,Call emergency services immediately,General Physician,true
+Anaphylaxis with full-body hives and drop in blood pressure,10,Administer epinephrine and call emergency services,General Physician,true
+Thyroid storm with extreme hyperthermia and agitation,10,Call emergency services immediately,General Physician,true
+Addisonian crisis with severe weakness and hypotension,10,Call emergency services immediately,General Physician,true
+Hyperkalemia with cardiac dysrhythmia and weakness,10,Call emergency services immediately,General Physician,true
+Acute liver failure with jaundice and encephalopathy,10,Call emergency services immediately,General Physician,true
+Severe dehydration with shock in elderly patient,9,Call emergency services immediately,General Physician,true
+Malaria with severe cerebral involvement and coma,10,Call emergency services immediately,General Physician,true
+Dengue hemorrhagic fever with bleeding and shock,10,Call emergency services immediately,General Physician,true
+Hyponatremia causing seizures and confusion,10,Call emergency services immediately,General Physician,true
+Acute kidney failure with no urine output for 12 hours,9,Go to emergency room immediately,General Physician,true
+Peritonitis with rigid abdomen and high fever,10,Call emergency services immediately,General Physician,true
+Bowel obstruction with vomiting and severe abdominal distension,9,Go to emergency room immediately,General Physician,true
+Heat stroke with core temperature above 104F and confusion,10,Cool patient and call emergency services immediately,General Physician,true
+Hypothermia with core temperature below 95F and altered consciousness,10,Warm patient and call emergency services immediately,General Physician,true
+Meningococcemia with non-blanching petechial rash and fever,10,Call emergency services immediately,General Physician,true
+Pulmonary embolism with sudden pleuritic chest pain and breathlessness,10,Call emergency services immediately,General Physician,true
+Persistent high fever above 103F for 3 days unresponsive to medication,7,Visit emergency room within hours,General Physician,false
+Moderate asthma attack partially responding to bronchodilator,7,Go to emergency room immediately,Pulmonologist,true
+Mild stroke symptoms that resolved within an hour,8,Go to emergency room immediately,Neurologist,true
+Uncontrolled hypertension with severe headache,8,Go to emergency room immediately,Cardiologist,true
+Deep laceration requiring stitches with heavy bleeding,7,Go to emergency room immediately,General Physician,true
+Suspected appendicitis with right lower abdominal pain and fever,8,Go to emergency room immediately,General Physician,true
+Kidney stone with severe flank pain and vomiting,7,Go to emergency room immediately,General Physician,true
+Severe allergic reaction with facial swelling but no breathing difficulty,7,Go to emergency room immediately,General Physician,true
+Sudden hearing loss in one ear after loud noise,7,Go to emergency room within 24 hours,ENT,false
+Moderate burn covering less than 10% of body,6,Go to emergency room immediately,Dermatologist,true
+Dislocated shoulder with severe pain and deformity,7,Go to emergency room immediately,Orthopedic,true
+Possible broken wrist after fall with deformity,7,Go to emergency room immediately,Orthopedic,true
+Concussion with brief loss of consciousness,8,Go to emergency room immediately,Neurologist,true
+Urinary tract infection with high fever and back pain,7,Go to emergency room immediately,General Physician,true
+Severe vomiting unable to keep fluids down for 24 hours,6,Go to emergency room immediately,General Physician,true
+Suspected ectopic pregnancy with severe pelvic pain,10,Call emergency services immediately,General Physician,true
+Testicular torsion with sudden severe testicular pain,9,Go to emergency room immediately,General Physician,true
+Ovarian cyst rupture with severe lower abdominal pain,9,Go to emergency room immediately,General Physician,true
+Miscarriage with heavy bleeding and severe cramping,8,Go to emergency room immediately,General Physician,true
+Suspected drug overdose with slowed breathing,9,Call emergency services immediately,Psychiatrist,true
+Persistent cough with blood-streaked sputum for 3 days,6,Visit doctor within 24 hours,Pulmonologist,false
+Increasing shortness of breath over 2 days with mild cough,5,Visit doctor within 24 hours,Pulmonologist,false
+Sudden onset of severe back pain after lifting,5,Visit emergency care or orthopedic within hours,Orthopedic,false
+Rash spreading rapidly with mild fever,5,Visit doctor within 24 hours,Dermatologist,false
+Tooth pain with facial swelling no breathing difficulty,6,Visit dentist or urgent care immediately,Dentist,false
+Persistent dizziness with nausea lasting more than 2 days,5,Visit doctor within 24 hours,Neurologist,false
+Moderate allergic reaction with hives but stable breathing,4,Take antihistamine and visit doctor today,General Physician,false
+Anxiety attack with chest pain but normal ECG history,5,Visit emergency care for evaluation,Psychiatrist,false
+Suspected COVID-19 with moderate breathing difficulty,6,Visit doctor or urgent care immediately,Pulmonologist,false
+Painful skin infection with red streaks but no systemic symptoms,5,Visit doctor within 24 hours,Dermatologist,false
+Moderate ear pain with discharge and muffled hearing,4,Visit doctor within 24 hours,ENT,false
+Knee swelling and pain after sports injury unable to bear weight,5,Visit emergency orthopedic care today,Orthopedic,false
+Severe migraine not responding to usual medication,6,Visit emergency care for IV treatment,Neurologist,false
+Irregular heartbeat noticed for first time without other symptoms,5,Visit cardiologist within 24 hours,Cardiologist,false
+Severe sore throat with white patches and high fever,5,Visit doctor within 24 hours,ENT,false
+Worsening lower back pain with new onset leg numbness,6,Visit emergency care or neurologist today,Neurologist,false
+Prolonged nosebleed controlled after 20 minutes of pressure,4,Visit ENT if recurs within 24 hours,ENT,false
+High blood sugar reading above 300 without symptoms,6,Visit doctor or urgent care today,General Physician,false
+Sudden vision change in one eye without pain,7,Visit ophthalmologist or emergency room today,Neurologist,false
+Acute gout flare with severe joint redness and swelling,4,Visit doctor within 24 hours for anti-inflammatories,Orthopedic,false
+Suspected urinary tract infection with burning and frequency,3,Visit doctor within 24 hours,General Physician,false
+Severe abdominal pain after eating fatty meal,6,Visit doctor or emergency care today,General Physician,false
+Skin abscess growing rapidly over 24 hours,5,Visit doctor within 24 hours for drainage,Dermatologist,false
+Significant mood deterioration with passive suicidal ideation,7,Go to emergency room or mental health crisis center today,Psychiatrist,true
+Persistent palpitations lasting more than 30 minutes first episode,6,Go to emergency room for ECG evaluation,Cardiologist,true
+Sudden unilateral facial pain with eye redness,7,Visit emergency care within hours,Neurologist,false
+Swollen painful lymph nodes with fever for more than 5 days,5,Visit doctor within 24 hours,General Physician,false
+Severe vertigo when changing positions with vomiting,5,Visit ENT or emergency care today,ENT,false
+Wheezing new onset without prior asthma history,6,Visit emergency care or pulmonologist today,Pulmonologist,false
+Suspected food poisoning with bloody diarrhea,7,Visit emergency care today,General Physician,false
+Pericarditis with sharp positional chest pain and fever,7,Go to emergency room immediately,Cardiologist,true
+Acute heart failure with pulmonary edema,10,Call emergency services immediately,Cardiologist,true
+Wolff-Parkinson-White syndrome with rapid heart rate episode,8,Go to emergency room immediately,Cardiologist,true
+Complete heart block with very slow heart rate and syncope,9,Call emergency services immediately,Cardiologist,true
+Endocarditis suspicion with fever and new heart murmur,8,Go to emergency room immediately,Cardiologist,true
+Stent thrombosis with recurrent chest pain after angioplasty,10,Call emergency services immediately,Cardiologist,true
+Massive pulmonary embolism with shock and cyanosis,10,Call emergency services immediately,Cardiologist,true
+Left ventricular failure with severe fatigue and cold extremities,8,Go to emergency room immediately,Cardiologist,true
+First-degree relative sudden cardiac death with chest pain,8,Go to emergency room immediately,Cardiologist,true
+Ventricular tachycardia with pulsating neck veins and dizziness,10,Call emergency services immediately,Cardiologist,true
+Basilar artery occlusion with locked-in syndrome,10,Call emergency services immediately,Neurologist,true
+Cerebellar hemorrhage with sudden severe headache and ataxia,10,Call emergency services immediately,Neurologist,true
+Guillain-Barre syndrome with ascending paralysis,9,Call emergency services immediately,Neurologist,true
+Myasthenic crisis with respiratory muscle failure,10,Call emergency services immediately,Neurologist,true
+Acute demyelinating encephalomyelitis with rapid deterioration,9,Call emergency services immediately,Neurologist,true
+Temporal lobe seizure with post-ictal confusion for over an hour,8,Go to emergency room immediately,Neurologist,true
+Spinal epidural abscess with fever and back pain paralysis,10,Call emergency services immediately,Neurologist,true
+Hypertensive encephalopathy with severe headache and vision changes,9,Call emergency services immediately,Neurologist,true
+Central retinal artery occlusion with sudden painless vision loss,9,Go to emergency room immediately,Neurologist,true
+Acute vertigo with hearing loss and tinnitus sudden onset,8,Go to emergency room immediately,Neurologist,true
+Massive pleural effusion with mediastinal shift and severe dyspnea,10,Call emergency services immediately,Pulmonologist,true
+Flash pulmonary edema in previously healthy patient,10,Call emergency services immediately,Pulmonologist,true
+Severe bronchiectasis exacerbation with high fever and hemoptysis,9,Call emergency services immediately,Pulmonologist,true
+Respiratory syncytial virus in infant with labored breathing,9,Call emergency services immediately,Pulmonologist,true
+Croup with inspiratory stridor and severe retractions in toddler,8,Call emergency services immediately,Pulmonologist,true
+Near drowning with delayed pulmonary edema,9,Call emergency services immediately,Pulmonologist,true
+Occupational chemical exposure with acute lung injury,9,Call emergency services immediately,Pulmonologist,true
+Pulmonary arteriovenous malformation rupture with hemoptysis,10,Call emergency services immediately,Pulmonologist,true
+Diffuse alveolar hemorrhage with rapid respiratory decline,10,Call emergency services immediately,Pulmonologist,true
+Severe sleep apnea with daytime somnolence and hypoxia,7,Go to emergency room for evaluation,Pulmonologist,true
+Rabies exposure with animal bite requiring post-exposure prophylaxis,8,Go to emergency room immediately,General Physician,true
+Tetanus prone wound with no vaccination history,8,Go to emergency room immediately,General Physician,true
+Severe iron deficiency anemia with heart pounding and pallor,7,Go to emergency room immediately,General Physician,true
+Acute pancreatitis with severe epigastric pain radiating to back,9,Call emergency services immediately,General Physician,true
+Ruptured ectopic pregnancy with shoulder tip pain and syncope,10,Call emergency services immediately,General Physician,true
+Severe hyperglycemia above 600 with altered sensorium,10,Call emergency services immediately,General Physician,true
+Acute adrenal crisis with profound weakness and low blood pressure,10,Call emergency services immediately,General Physician,true
+Typhoid perforation with sudden silent abdomen and shock,10,Call emergency services immediately,General Physician,true
+Severe leptospirosis with jaundice bleeding and renal failure,9,Call emergency services immediately,General Physician,true
+Acute mesenteric ischemia with sudden severe abdominal pain,10,Call emergency services immediately,General Physician,true
+High-velocity spinal trauma with complete loss of limb sensation,10,Call emergency services and do not move patient,Orthopedic,true
+Cauda equina syndrome with sudden bowel and bladder dysfunction,10,Go to emergency room immediately,Orthopedic,true
+Necrotizing soft tissue infection overlying a fracture site,10,Call emergency services immediately,Orthopedic,true
+Gas gangrene following penetrating trauma to limb,10,Call emergency services immediately,Orthopedic,true
+Acute osteomyelitis with fever and bone pain in child,8,Go to emergency room immediately,Orthopedic,true
+Septic arthritis with hot swollen joint and high fever,9,Go to emergency room immediately,Orthopedic,true
+Vascular injury following knee dislocation with absent pulse,10,Call emergency services immediately,Orthopedic,true
+Bilateral wrist drop after humeral fracture,8,Go to emergency room immediately,Orthopedic,true
+Massive hemarthrosis in hemophiliac patient after minor trauma,8,Go to emergency room immediately,Orthopedic,true
+Progressive foot drop with back pain over 48 hours,8,Go to emergency room immediately,Orthopedic,true
+Airway foreign body with complete stridor in child,10,Call emergency services immediately,ENT,true
+Expanding neck hematoma after thyroid surgery,10,Call emergency services immediately,ENT,true
+Acute bilateral sensorineural hearing loss after head trauma,9,Go to emergency room immediately,ENT,true
+Severe sinusitis with orbital cellulitis and proptosis,9,Go to emergency room immediately,ENT,true
+Petrous apicitis with sixth nerve palsy and severe ear pain,9,Go to emergency room immediately,ENT,true
+Rhinosinusitis with cavernous sinus thrombosis signs,10,Call emergency services immediately,ENT,true
+Acute otitic hydrocephalus with severe headache,9,Go to emergency room immediately,ENT,true
+Post-operative tonsil bed hemorrhage with bright red bleeding,9,Go to emergency room immediately,ENT,true
+Spasmodic croup with severe stridor unresponsive to nebulizers,8,Call emergency services immediately,ENT,true
+Internal jugular vein thrombophlebitis after ear infection,9,Go to emergency room immediately,ENT,true
+Suspected carbon monoxide poisoning with headache and confusion in multiple family members,9,Evacuate immediately and call emergency services,General Physician,true
+Severe preeclampsia with headache vision changes and high blood pressure in pregnancy,10,Call emergency services immediately,General Physician,true
+Eclampsia with seizure in pregnant patient,10,Call emergency services immediately,General Physician,true
+Sudden hearing loss in both ears after explosive blast,9,Call emergency services immediately,ENT,true
+Acute angle closure glaucoma with severe eye pain and blurred vision,9,Go to emergency room immediately,Neurologist,true
+Fulminating sepsis from infected wound with confusion and low blood pressure,10,Call emergency services immediately,General Physician,true
+Severe hypernatremia with confusion and seizures in elderly,9,Call emergency services immediately,General Physician,true
+Mass casualty chemical exposure with respiratory distress,10,Call emergency services and move to fresh air,Pulmonologist,true
+Acute angle closure glaucoma with nausea vomiting and headache,8,Go to emergency room immediately,Neurologist,true
+Near fatal asthma with silent chest and cyanosis,10,Call emergency services immediately,Pulmonologist,true
