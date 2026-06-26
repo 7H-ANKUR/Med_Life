@@ -9,7 +9,8 @@ A location-aware medical recommendation web app for travelers. Describe your sym
 ## ✨ Features
 
 - 🔍 **AI Symptom Analysis** — OpenAI / Gemini classifies symptoms to specialist + urgency (low / moderate / high / emergency)
-- 🗺️ **Google Maps Powered** — Real-time nearby search with no static database
+- 🗺️ **Interactive Location Selection** — Draggable map to pinpoint exact location instead of relying only on IP address
+- 🏥 **Live Clinic Details via Apify** — Scrapes real-time phone numbers, photos, and exact Google Maps directions
 - 🚨 **Emergency Mode** — Detects emergencies, shows nearest open ER + Call 112 button
 - 💰 **Fee Estimates** — City-specific consultation fee ranges from real data
 - 🔖 **Save Places** — Bookmark hospitals for quick future access
@@ -200,12 +201,14 @@ npx vercel --prod
 | File | Purpose |
 |---|---|
 | [`apps/api/services/maps_service.py`](apps/api/services/maps_service.py) | Google Maps proxy service |
+| [`apps/api/services/apify_service.py`](apps/api/services/apify_service.py) | Apify integration for live clinic details |
 | [`apps/api/services/ai_service.py`](apps/api/services/ai_service.py) | OpenAI/Gemini symptom analysis |
 | [`apps/api/services/ranking_service.py`](apps/api/services/ranking_service.py) | Scoring engine (normal + emergency mode) |
 | [`apps/api/services/fee_service.py`](apps/api/services/fee_service.py) | Fee estimation from dataset |
 | [`apps/api/routers/places.py`](apps/api/routers/places.py) | Core nearby search endpoint |
+| [`apps/web/src/components/DraggableMap.tsx`](apps/web/src/components/DraggableMap.tsx) | Interactive map for location selection |
 | [`apps/web/src/app/search/page.tsx`](apps/web/src/app/search/page.tsx) | Symptom search page |
-| [`apps/web/src/app/results/page.tsx`](apps/web/src/app/results/page.tsx) | Results + map view |
+| [`apps/web/src/app/results/page.tsx`](apps/web/src/app/results/page.tsx) | Results + map view + live clinic details modal |
 | [`apps/web/src/app/emergency/page.tsx`](apps/web/src/app/emergency/page.tsx) | Emergency page |
 | [`scripts/parse-fee-dataset.py`](scripts/parse-fee-dataset.py) | ETL from docter.csv |
 
