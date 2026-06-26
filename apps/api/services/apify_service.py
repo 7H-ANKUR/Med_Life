@@ -174,6 +174,8 @@ class ApifyService:
                         "rating": place.get("totalScore"),
                         "review_count": place.get("reviewsCount"),
                         "address": place.get("address"),
+                        "maps_url": place.get("url"),
+                        "location": place.get("location"),
                     }
                     print(f"[Apify] Success for {place_name}: {len(photos)} photos")
                     return result

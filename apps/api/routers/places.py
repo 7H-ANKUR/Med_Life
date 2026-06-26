@@ -191,13 +191,11 @@ async def place_detail(place_id: str, db: AsyncSession = Depends(get_db)):
     if not detail:
         raise HTTPException(404, "Place not found")
 
-    # Full Apify scrape is too slow (30s+), so we bypass it for instant loading.
-    # We rely purely on Google Places API details.
-    apify_data = {}
-    # apify_data = await apify_service.fetch_place_details(
-    #     place_name=detail.get("name"),
-    #     city=detail.get("city", ""),
-    # )
+    # Full Apify scrape for detail page (phone, website, all photos, reviews)
+    apify_data = await apify_service.fetch_place_details(
+        place_name=detail.get("name"),
+        city=detail.get("city", ""),
+    )
 
     # Normalize photo URLs
     photo_urls: list[str] = []
@@ -215,11 +213,11 @@ async def place_detail(place_id: str, db: AsyncSession = Depends(get_db)):
     live_rating = apify_data.get("rating") or detail.get("rating")
     live_reviews = apify_data.get("review_count") or detail.get("user_ratings_total")
 
-    loc = detail.get("geometry", {}).get("location", {})
+    loc = apify_data.get("location") or detail.get("geometry", {}).get("location", {})
     return {
         "place_id": place_id,
         "name": detail.get("name"),
-        "address": detail.get("formatted_address"),
+        "address": apify_data.get("address") or detail.get("formatted_address"),
         "phone": phone,
         "website": website,
         "rating": live_rating,
@@ -229,7 +227,7 @@ async def place_detail(place_id: str, db: AsyncSession = Depends(get_db)):
         "photos": photo_urls,
         "reviews": apify_data.get("reviews", [])[:5],
         "location": loc,
-        "maps_url": (
+        "maps_url": apify_data.get("maps_url") or (
             f"https://www.google.com/maps/search/?api=1&query={loc.get('lat', 0)},{loc.get('lng', 0)}"
             if loc else None
         ),

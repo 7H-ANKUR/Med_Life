@@ -440,7 +440,8 @@ export default function ResultsPage() {
               {isModalLoading ? (
                 <div className="flex flex-col items-center justify-center py-12">
                   <span className="material-symbols-outlined text-primary text-4xl animate-spin mb-4">progress_activity</span>
-                  <p className="text-on-surface-variant font-medium">Fetching details...</p>
+                  <p className="text-on-surface-variant font-medium">Fetching exact contact details and location...</p>
+                  <p className="text-sm text-on-surface-variant/70 mt-2">Connecting to Google Maps (this can take 10-20 seconds)</p>
                 </div>
               ) : modalData ? (
                 <div className="space-y-6">
