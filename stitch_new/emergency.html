@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MedLife Emergency Response</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#191c1e",
+                    "secondary-fixed": "#cde5ff",
+                    "surface-container-highest": "#e0e3e5",
+                    "secondary-fixed-dim": "#94ccff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#45d8ed",
+                    "inverse-primary": "#b7c4ff",
+                    "on-surface-variant": "#444653",
+                    "primary-fixed-dim": "#b7c4ff",
+                    "secondary-container": "#6cbdfe",
+                    "inverse-surface": "#2d3133",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container": "#eceef0",
+                    "surface": "#f7f9fb",
+                    "tertiary-container": "#00606b",
+                    "tertiary-fixed": "#98f0ff",
+                    "surface-bright": "#f7f9fb",
+                    "error-container": "#ffdad6",
+                    "secondary": "#006398",
+                    "background": "#f7f9fb",
+                    "outline": "#747685",
+                    "primary": "#0131a6",
+                    "surface-container-low": "#f2f4f6",
+                    "on-secondary-fixed-variant": "#004b74",
+                    "primary-fixed": "#dde1ff",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#e6e8ea",
+                    "on-primary": "#ffffff",
+                    "tertiary": "#00474f",
+                    "on-secondary-container": "#004b75",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-tertiary-fixed": "#001f24",
+                    "on-primary-container": "#bfcaff",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#3554c6",
+                    "surface-dim": "#d8dadc",
+                    "primary-container": "#2b4cbe",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#133aae",
+                    "outline-variant": "#c4c5d6",
+                    "on-surface": "#191c1e",
+                    "on-primary-fixed": "#001453",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#001d32",
+                    "on-tertiary-container": "#4edff3",
+                    "on-tertiary-fixed-variant": "#004f58"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "8px",
+                    "xl": "64px",
+                    "md": "24px",
+                    "base": "4px",
+                    "lg": "40px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "sm": "16px"
+            },
+            "fontFamily": {
+                    "label-lg": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .emergency-pulse {
+            animation: pulse-red 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0px rgba(186, 26, 26, 0.4); }
+            70% { box-shadow: 0 0 0 30px rgba(186, 26, 26, 0); }
+            100% { box-shadow: 0 0 0 0px rgba(186, 26, 26, 0); }
+        }
+
+        .bg-pulse-radial {
+            background: radial-gradient(circle at center, rgba(186, 26, 26, 0.08) 0%, transparent 70%);
+            animation: radial-grow 4s infinite alternate ease-in-out;
+        }
+
+        @keyframes radial-grow {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            100% { transform: scale(1.3); opacity: 1; }
+        }
+
+        .orb-float {
+            animation: floating 6s infinite ease-in-out;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-error-container selection:text-on-error-container min-h-screen overflow-x-hidden">
+<!-- Global Background Elements -->
+<div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+<div class="absolute inset-0 bg-pulse-radial"></div>
+<div class="orb-float absolute -top-40 -right-40 w-96 h-96 rounded-full bg-error/10 blur-[100px]"></div>
+<div class="orb-float absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-primary/5 blur-[100px]" style="animation-delay: -3s;"></div>
+</div>
+<!-- Navigation Shell - TopAppBar Implementation -->
+<header class="fixed top-0 w-full z-40 bg-surface/80 backdrop-blur-xl border-b border-white/20 shadow-[0_4px_30px_rgba(43,76,190,0.04)] h-16 flex justify-between items-center px-gutter">
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-xl text-primary hover:bg-primary/5 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<span class="font-display-lg text-headline-md tracking-tight text-primary">MedLife</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-xl text-on-surface-variant hover:bg-primary/5 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 rounded-xl text-on-surface-variant hover:bg-primary/5 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<main class="pt-16 pb-xl container mx-auto px-gutter max-w-container-max min-h-screen flex flex-col items-center justify-center">
+<!-- Emergency Header Section -->
+<div class="text-center mb-lg space-y-4">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-error-container text-on-error-container font-label-lg uppercase tracking-wider mb-sm">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+                Emergency Mode Active
+            </div>
+<h1 class="font-headline-lg text-headline-lg text-on-background max-w-2xl mx-auto">
+                Need Medical Assistance?
+            </h1>
+<p class="text-on-surface-variant font-body-lg max-w-xl mx-auto">
+                One-tap connection to emergency dispatch and real-time medical profile sharing with responders.
+            </p>
+</div>
+<!-- Central Action Area: Bento Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md w-full">
+<!-- Main Call Card -->
+<div class="md:col-span-8 glass rounded-[24px] p-lg flex flex-col items-center justify-center text-center relative overflow-hidden group shadow-[0_30px_50px_rgba(186,26,26,0.06)] min-h-[400px]">
+<div class="absolute inset-0 bg-gradient-to-br from-error/5 to-transparent pointer-events-none"></div>
+<button class="emergency-pulse relative w-48 h-48 md:w-64 md:h-64 rounded-full bg-error text-on-error flex flex-col items-center justify-center gap-2 transition-transform hover:scale-105 active:scale-95 duration-300 z-10 shadow-2xl">
+<span class="material-symbols-outlined !text-6xl md:!text-8xl" data-icon="emergency_share" style="font-variation-settings: 'FILL' 1;">emergency_share</span>
+<span class="font-label-lg text-lg uppercase tracking-[0.2em] font-bold">Call 911</span>
+</button>
+<div class="mt-lg z-10">
+<p class="text-on-surface-variant font-label-lg mb-2">AUTO-SENDING LOCATION &amp; VITALS</p>
+<div class="flex items-center gap-4 justify-center">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="font-label-sm">GPS Active</span>
+</div>
+<div class="w-px h-4 bg-outline-variant"></div>
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="monitor_heart">monitor_heart</span>
+<span class="font-label-sm">Profile Ready</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Bento Stack -->
+<div class="md:col-span-4 flex flex-col gap-md">
+<!-- Nearest Hospital Card -->
+<div class="glass rounded-[24px] p-md flex flex-col gap-sm shadow-[0_20px_40px_rgba(43,76,190,0.04)] border-l-4 border-l-primary relative overflow-hidden">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-label-sm text-primary uppercase tracking-widest block mb-1">Nearest ER</span>
+<h3 class="font-headline-md text-on-background">St. Jude Medical</h3>
+</div>
+<div class="bg-primary/10 p-2 rounded-xl text-primary">
+<span class="material-symbols-outlined" data-icon="local_hospital">local_hospital</span>
+</div>
+</div>
+<div class="space-y-3 mt-2">
+<div class="flex justify-between items-center text-on-surface-variant">
+<span class="font-body-md flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="near_me">near_me</span>
+                                1.2 miles away
+                            </span>
+<span class="font-label-lg text-secondary">6 min drive</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span class="font-body-md flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+                                Wait Time
+                            </span>
+<span class="font-label-lg text-tertiary">12 min</span>
+</div>
+</div>
+<div class="h-32 rounded-xl mt-2 overflow-hidden bg-surface-container shadow-inner">
+<div class="w-full h-full bg-cover bg-center grayscale opacity-80" data-location="Chicago" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_03U3-iz8FfO9tGL0pdy1RAcSSqLKc7EsVvXgckp1sTdzg_61K0zknBF_yFfTHhIhvLTGSz5ZtDzh_G3piudwLYKBQVREvB_CY06pyZUs9bi6QaArjWVIBzU5JzYdbrAgvFmd2aBl5vHLLJiXCx8aDJwq7wdxYxlZoZLsGI6TcNfhEnUpGsIrc12J4coW4lvkKRdMFh-u53AMSCg3FTQc0y03g8U0yX4g4XMoCcUYOKgkcmze7-XTbpAH-31PvEvoHdPypoYBHd4')"></div>
+</div>
+<button class="w-full mt-2 py-3 rounded-full bg-primary text-on-primary font-label-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="directions">directions</span>
+                        Start Navigation
+                    </button>
+</div>
+<!-- Emergency Contact Card -->
+<div class="glass rounded-[24px] p-md flex items-center gap-4 shadow-sm">
+<div class="w-12 h-12 rounded-full border-2 border-primary/20 p-0.5 overflow-hidden">
+<img class="w-full h-full object-cover rounded-full" data-alt="Close-up professional portrait of a woman in her 50s with a kind expression, soft natural studio lighting against a clean white clinical background, high-end commercial aesthetic for a medical emergency application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFF_2BN4j7IDU5SSCNOoRIiyMAfIu8CRCDpLYfFDm-n7hytRToDzSzo3fQ59wDA6WCBxAkVwLSjV9LWZts1_uh86sKMunUuRJ7ADifuwpdj5a30D_YMVoX-pEq5ZTQtrgeTjl0edB2za8JdywTIXsYufvUw4JLvFyyK59Vfvd4E9-nXPdO1r-gISfDEwcqzZNQh3xAbwGY7FCoDTJY_PKgsUDa-PFhPCgKqIQ8VLvMQQifyv8nbRqpKbet87-vPWMlMlBjiF5hxJ4"/>
+</div>
+<div class="flex-1">
+<h4 class="font-label-lg text-on-background">Sarah Jenkins (Spouse)</h4>
+<p class="text-on-surface-variant text-sm">Notify immediately</p>
+</div>
+<button class="p-2 rounded-full bg-surface-container text-primary hover:bg-primary-container hover:text-on-primary-container transition-all">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Assistance Section -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md w-full mt-lg">
+<!-- Quick Actions -->
+<button class="group glass p-md rounded-[24px] flex items-center gap-4 hover:bg-primary/5 transition-all">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container/20 text-secondary flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="medical_information">medical_information</span>
+</div>
+<div class="text-left">
+<p class="font-label-lg text-on-background">Medical ID</p>
+<p class="text-xs text-on-surface-variant">View allergies &amp; blood type</p>
+</div>
+</button>
+<button class="group glass p-md rounded-[24px] flex items-center gap-4 hover:bg-primary/5 transition-all">
+<div class="w-12 h-12 rounded-2xl bg-tertiary-container/20 text-tertiary flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="ecg_heart">ecg_heart</span>
+</div>
+<div class="text-left">
+<p class="font-label-lg text-on-background">First Aid AI</p>
+<p class="text-xs text-on-surface-variant">Guided instructions for CPR/Choking</p>
+</div>
+</button>
+<button class="group glass p-md rounded-[24px] flex items-center gap-4 hover:bg-primary/5 transition-all">
+<div class="w-12 h-12 rounded-2xl bg-error-container/20 text-error flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="sos">sos</span>
+</div>
+<div class="text-left">
+<p class="font-label-lg text-on-background">Silent SOS</p>
+<p class="text-xs text-on-surface-variant">Alert authorities without sound</p>
+</div>
+</button>
+</div>
+<!-- Footer / Feedback -->
+<footer class="mt-xl text-center pb-md">
+<p class="text-on-surface-variant text-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="verified_user">verified_user</span>
+                Secure connection to local emergency infrastructure
+            </p>
+</footer>
+</main>
+<!-- Side Navigation (Suppressed/Secondary for Emergency) -->
+<aside class="hidden fixed inset-y-0 left-0 w-72 z-50 bg-surface-container-lowest/90 backdrop-blur-2xl border-r border-white/20 shadow-[10px_0_50px_rgba(43,76,190,0.06)] flex flex-col p-md transform -translate-x-full transition-transform duration-300" id="side-nav">
+<div class="mb-lg">
+<h2 class="font-headline-md text-headline-md text-primary">MedLife Portal</h2>
+<p class="text-on-surface-variant font-label-lg">Clinical Dashboard</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-transform duration-300 hover:translate-x-1 rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label-lg">Search</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-transform duration-300 hover:translate-x-1 rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+<span class="font-label-lg">Saved</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-transform duration-300 hover:translate-x-1 rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-label-lg">History</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-transform duration-300 hover:translate-x-1 rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-lg">Profile</span>
+</a>
+</nav>
+<div class="mt-auto space-y-2 border-t border-outline-variant/20 pt-md">
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high transition-transform duration-300 hover:translate-x-1 rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-lg">Settings</span>
+</a>
+<a class="flex items-center gap-4 text-error px-4 py-3 hover:bg-error-container transition-transform duration-300 hover:translate-x-1 rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-label-lg">Logout</span>
+</a>
+</div>
+</aside>
+<script>
+        // Micro-interactions and side nav toggle
+        const sideNav = document.getElementById('side-nav');
+        const menuBtn = document.querySelector('[data-icon="menu"]').parentElement;
+        
+        let navOpen = false;
+
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navOpen = !navOpen;
+            if (navOpen) {
+                sideNav.classList.remove('-translate-x-full');
+                sideNav.classList.add('translate-x-0');
+                sideNav.classList.remove('hidden');
+            } else {
+                sideNav.classList.add('-translate-x-full');
+                sideNav.classList.remove('translate-x-0');
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (navOpen && !sideNav.contains(e.target) && !menuBtn.contains(e.target)) {
+                navOpen = false;
+                sideNav.classList.add('-translate-x-full');
+                sideNav.classList.remove('translate-x-0');
+            }
+        });
+
+        // Pulsing Interaction for main emergency button
+        const mainBtn = document.querySelector('.emergency-pulse');
+        mainBtn.addEventListener('mousedown', () => {
+            mainBtn.style.transform = 'scale(0.95)';
+        });
+        mainBtn.addEventListener('mouseup', () => {
+            mainBtn.style.transform = 'scale(1.05)';
+        });
+    </script>
+</body></html>

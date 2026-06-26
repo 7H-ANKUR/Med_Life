@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: travel-health-api
+    env: python
+    rootDir: apps/api
+    buildCommand: "pip install -r requirements.txt && alembic upgrade head"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: DATABASE_URL
+        sync: false
+      - key: REDIS_URL
+        sync: false
+      - key: GOOGLE_MAPS_API_KEY
+        sync: false
+      - key: AI_PROVIDER
+        value: gemini
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: ENVIRONMENT
+        value: production
