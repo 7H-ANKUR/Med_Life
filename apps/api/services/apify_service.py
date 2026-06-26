@@ -132,10 +132,10 @@ class ApifyService:
                     url,
                     json=run_input,
                     headers=headers,
-                    timeout=aiohttp.ClientTimeout(total=60),
-                    params={"token": self.api_key},
+                    timeout=aiohttp.ClientTimeout(total=120),
+                    params={"token": self.api_key, "waitForFinish": 120},
                 ) as resp:
-                    if resp.status != 200:
+                    if resp.status != 200 and resp.status != 201:
                         print(f"[Apify] HTTP {resp.status} for {place_name}")
                         return {}
                     data = await resp.json()
