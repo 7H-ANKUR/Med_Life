@@ -4,7 +4,7 @@ from typing import Dict, Any, List, Optional
 from config import settings
 
 # Google Maps Scraper actor on Apify
-ACTOR_ID = "compass/google-maps-scraper"
+ACTOR_ID = "compass~crawler-google-places"
 
 # Direct Apify REST endpoint for running actors (avoids SDK version issues)
 APIFY_BASE_URL = "https://api.apify.com/v2"
