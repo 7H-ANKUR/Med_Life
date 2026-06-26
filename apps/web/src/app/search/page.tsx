@@ -23,6 +23,7 @@ export default function SearchPage() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [mapOpen, setMapOpen] = useState(false);
   const [userLocation, setUserLocation] = useState<{lat: number, lng: number} | null>(null);
+  const [locationName, setLocationName] = useState<string>('');
   const [tempLocation, setTempLocation] = useState<{lat: number, lng: number}>({ lat: 28.6139, lng: 77.2090 });
   const router = useRouter();
 
@@ -33,6 +34,21 @@ export default function SearchPage() {
       });
     }
   }, []);
+
+  useEffect(() => {
+    if (userLocation) {
+      fetch(`https://nominatim.openstreetmap.org/reverse?lat=${userLocation.lat}&lon=${userLocation.lng}&format=json`)
+        .then(res => res.json())
+        .then(data => {
+          if (data && data.display_name) {
+            setLocationName(data.display_name);
+          }
+        })
+        .catch(err => console.error('Geocoding failed:', err));
+    } else {
+      setLocationName('');
+    }
+  }, [userLocation]);
 
   const handleAnalyze = async () => {
     if (!symptoms.trim()) return;
@@ -210,10 +226,20 @@ export default function SearchPage() {
               >
                 <span className="material-symbols-outlined text-sm">location_on</span>
                 <span className="text-label-sm font-label-lg">
-                  {userLocation ? 'Custom Location Set' : 'Set Exact Location'}
+                  {userLocation ? 'Change Location' : 'Set Exact Location'}
                 </span>
               </button>
             </div>
+            
+            {locationName && (
+              <div className="mb-4 px-4 py-2 bg-primary/5 border border-primary/20 rounded-xl flex items-center gap-2">
+                <span className="material-symbols-outlined text-primary text-sm">my_location</span>
+                <span className="text-sm text-primary font-medium truncate" title={locationName}>
+                  Searching near: {locationName}
+                </span>
+              </div>
+            )}
+            
             <div className="relative group">
               <textarea
                 className="w-full bg-white/50 border-2 border-outline-variant focus:border-primary focus:ring-4 focus:ring-primary/10 rounded-2xl p-6 font-body-md text-body-md transition-all resize-none"
