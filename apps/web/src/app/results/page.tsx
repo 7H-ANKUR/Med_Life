@@ -440,67 +440,28 @@ export default function ResultsPage() {
               {isModalLoading ? (
                 <div className="flex flex-col items-center justify-center py-12">
                   <span className="material-symbols-outlined text-primary text-4xl animate-spin mb-4">progress_activity</span>
-                  <p className="text-on-surface-variant font-medium">Fetching live details from Google Maps...</p>
-                  <p className="text-sm text-on-surface-variant/70 mt-2">This may take up to 30 seconds to fetch high-quality images and reviews.</p>
+                  <p className="text-on-surface-variant font-medium">Fetching details...</p>
                 </div>
               ) : modalData ? (
-                <div className="space-y-8">
-                  {/* Photos */}
-                  {modalData.photos && modalData.photos.length > 0 && (
-                    <div>
-                      <h4 className="font-label-lg text-label-lg text-on-surface-variant mb-3">Photos</h4>
-                      <div className="flex gap-3 overflow-x-auto pb-2 snap-x">
-                        {modalData.photos.map((photo: string, idx: number) => (
-                          <div key={idx} className="w-64 h-48 rounded-2xl shrink-0 snap-start bg-cover bg-center" style={{ backgroundImage: `url(${photo})` }} />
-                        ))}
+                <div className="space-y-6">
+                  <div className="space-y-4">
+                    <h4 className="font-label-lg text-label-lg text-on-surface-variant">Contact & Location</h4>
+                    <div className="flex items-start gap-3">
+                      <span className="material-symbols-outlined text-primary">location_on</span>
+                      <p className="text-body-md text-on-surface">{modalData.address}</p>
+                    </div>
+                    {modalData.phone && modalData.phone !== 'Contact Clinic directly' && (
+                      <div className="flex items-center gap-3">
+                        <span className="material-symbols-outlined text-primary">call</span>
+                        <a href={`tel:${modalData.phone}`} className="text-primary hover:underline text-body-md">{modalData.phone}</a>
                       </div>
-                    </div>
-                  )}
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {/* Info */}
-                    <div className="space-y-4">
-                      <h4 className="font-label-lg text-label-lg text-on-surface-variant">Contact & Location</h4>
-                      <div className="flex items-start gap-3">
-                        <span className="material-symbols-outlined text-primary">location_on</span>
-                        <p className="text-body-md text-on-surface">{modalData.address}</p>
+                    )}
+                    {modalData.website && (
+                      <div className="flex items-center gap-3">
+                        <span className="material-symbols-outlined text-primary">language</span>
+                        <a href={modalData.website} target="_blank" rel="noreferrer" className="text-primary hover:underline text-body-md truncate">{modalData.website}</a>
                       </div>
-                      {modalData.phone && modalData.phone !== 'Contact Clinic directly' && (
-                        <div className="flex items-center gap-3">
-                          <span className="material-symbols-outlined text-primary">call</span>
-                          <a href={`tel:${modalData.phone}`} className="text-primary hover:underline text-body-md">{modalData.phone}</a>
-                        </div>
-                      )}
-                      {modalData.website && (
-                        <div className="flex items-center gap-3">
-                          <span className="material-symbols-outlined text-primary">language</span>
-                          <a href={modalData.website} target="_blank" rel="noreferrer" className="text-primary hover:underline text-body-md truncate">{modalData.website}</a>
-                        </div>
-                      )}
-                    </div>
-                    
-                    {/* Reviews */}
-                    <div>
-                      <h4 className="font-label-lg text-label-lg text-on-surface-variant mb-3">Recent Reviews</h4>
-                      {modalData.reviews && modalData.reviews.length > 0 ? (
-                        <div className="space-y-4">
-                          {modalData.reviews.slice(0, 3).map((r: any, idx: number) => (
-                            <div key={idx} className="bg-surface-container-low p-4 rounded-2xl">
-                              <div className="flex items-center gap-2 mb-2">
-                                <span className="font-medium text-sm text-on-surface">{r.name}</span>
-                                <div className="flex items-center gap-0.5 text-amber-500">
-                                  <span className="material-symbols-outlined text-[14px]">star</span>
-                                  <span className="text-xs font-bold">{r.rating}</span>
-                                </div>
-                              </div>
-                              <p className="text-body-sm text-on-surface-variant line-clamp-3">{r.text}</p>
-                            </div>
-                          ))}
-                        </div>
-                      ) : (
-                        <p className="text-body-sm text-on-surface-variant">No reviews available.</p>
-                      )}
-                    </div>
+                    )}
                   </div>
                 </div>
               ) : (
