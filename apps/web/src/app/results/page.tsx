@@ -450,10 +450,14 @@ export default function ResultsPage() {
                       <span className="material-symbols-outlined text-primary">location_on</span>
                       <p className="text-body-md text-on-surface">{modalData.address}</p>
                     </div>
-                    {modalData.phone && modalData.phone !== 'Contact Clinic directly' && (
+                    {modalData.phone && (
                       <div className="flex items-center gap-3">
                         <span className="material-symbols-outlined text-primary">call</span>
-                        <a href={`tel:${modalData.phone}`} className="text-primary hover:underline text-body-md">{modalData.phone}</a>
+                        {modalData.phone === 'Contact Clinic directly' ? (
+                          <span className="text-body-md text-on-surface-variant italic">Contact Clinic directly</span>
+                        ) : (
+                          <a href={`tel:${modalData.phone}`} className="text-primary hover:underline text-body-md">{modalData.phone}</a>
+                        )}
                       </div>
                     )}
                     {modalData.website && (
