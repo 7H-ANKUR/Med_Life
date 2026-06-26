@@ -159,16 +159,32 @@ export default function ResultsPage() {
           ? parsed.specialists[0]
           : (parsed.specialist_type || undefined);
 
-        // Fetch location via IP
+        // Fetch location (either from user's explicit pin or fallback to IP)
         let lat: number | undefined, lng: number | undefined, city: string | undefined;
-        try {
-          const ipRes = await axios.get('https://ipapi.co/json/');
-          lat = ipRes.data.latitude;
-          lng = ipRes.data.longitude;
-          city = ipRes.data.city;
-        } catch (e) {
-          console.error("IP geolocation failed, using Delhi fallback");
-          city = 'Delhi';
+        
+        const storedLocation = localStorage.getItem('userLocation');
+        if (storedLocation) {
+          try {
+            const loc = JSON.parse(storedLocation);
+            lat = loc.lat;
+            lng = loc.lng;
+            console.log("Using exact user location from pin:", lat, lng);
+          } catch (e) {
+            console.error("Failed to parse userLocation", e);
+          }
+        }
+
+        if (!lat || !lng) {
+          try {
+            const ipRes = await axios.get('https://ipapi.co/json/');
+            lat = ipRes.data.latitude;
+            lng = ipRes.data.longitude;
+            city = ipRes.data.city;
+            console.log("Using IP fallback location:", lat, lng, city);
+          } catch (e) {
+            console.error("IP geolocation failed, using Delhi fallback");
+            city = 'Delhi';
+          }
         }
 
         // Fetch providers

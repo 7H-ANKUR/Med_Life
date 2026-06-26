@@ -1,9 +1,12 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import dynamic from 'next/dynamic';
 import { symptomsService } from '@/services/api';
+
+const DraggableMap = dynamic(() => import('@/components/DraggableMap'), { ssr: false });
 
 const QUICK_SYMPTOMS = [
   { label: 'Migraine', text: 'I have a severe migraine headache with light sensitivity and nausea' },
@@ -18,7 +21,18 @@ export default function SearchPage() {
   const [symptoms, setSymptoms] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [mapOpen, setMapOpen] = useState(false);
+  const [userLocation, setUserLocation] = useState<{lat: number, lng: number} | null>(null);
+  const [tempLocation, setTempLocation] = useState<{lat: number, lng: number}>({ lat: 28.6139, lng: 77.2090 });
   const router = useRouter();
+
+  useEffect(() => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition((pos) => {
+        setTempLocation({ lat: pos.coords.latitude, lng: pos.coords.longitude });
+      });
+    }
+  }, []);
 
   const handleAnalyze = async () => {
     if (!symptoms.trim()) return;
@@ -26,6 +40,11 @@ export default function SearchPage() {
     try {
       const res = await symptomsService.analyze(symptoms);
       localStorage.setItem('lastAnalysis', JSON.stringify(res.data));
+      if (userLocation) {
+        localStorage.setItem('userLocation', JSON.stringify(userLocation));
+      } else {
+        localStorage.removeItem('userLocation');
+      }
       router.push('/results');
     } catch (error) {
       console.error(error);
@@ -183,6 +202,18 @@ export default function SearchPage() {
 
           {/* Search Card */}
           <div className="max-w-4xl mx-auto glass rounded-3xl p-6 shadow-[0_20px_50px_rgba(43,76,190,0.08)] glass-border mb-8">
+            <div className="flex justify-between items-center mb-3 px-2">
+              <span className="text-on-surface-variant text-label-lg font-medium">What&apos;s bothering you?</span>
+              <button 
+                onClick={() => setMapOpen(true)} 
+                className="flex items-center gap-1 text-primary hover:bg-primary/5 px-3 py-1.5 rounded-full transition-all border border-primary/20 bg-primary/5 active:scale-95"
+              >
+                <span className="material-symbols-outlined text-sm">location_on</span>
+                <span className="text-label-sm font-label-lg">
+                  {userLocation ? 'Custom Location Set' : 'Set Exact Location'}
+                </span>
+              </button>
+            </div>
             <div className="relative group">
               <textarea
                 className="w-full bg-white/50 border-2 border-outline-variant focus:border-primary focus:ring-4 focus:ring-primary/10 rounded-2xl p-6 font-body-md text-body-md transition-all resize-none"
@@ -321,6 +352,42 @@ export default function SearchPage() {
           </div>
         </section>
       </main>
+
+      {/* ── Map Modal ── */}
+      {mapOpen && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6">
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setMapOpen(false)} />
+          <div className="relative w-full max-w-3xl bg-surface rounded-3xl shadow-2xl overflow-hidden flex flex-col h-[70vh] sm:h-[80vh]">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-outline-variant">
+              <h3 className="font-headline-sm text-headline-sm text-on-surface">Set Your Exact Location</h3>
+              <button onClick={() => setMapOpen(false)} className="p-2 hover:bg-on-surface/5 rounded-full transition-colors">
+                <span className="material-symbols-outlined">close</span>
+              </button>
+            </div>
+            <div className="flex-1 bg-surface-container-low relative">
+              <DraggableMap 
+                initialLat={tempLocation.lat} 
+                initialLng={tempLocation.lng} 
+                onLocationSelect={(lat, lng) => setTempLocation({ lat, lng })}
+              />
+            </div>
+            <div className="p-4 border-t border-outline-variant flex justify-end gap-3 bg-surface">
+              <button onClick={() => setMapOpen(false)} className="px-6 py-2 rounded-full font-label-lg text-on-surface-variant hover:bg-on-surface/5">
+                Cancel
+              </button>
+              <button 
+                onClick={() => {
+                  setUserLocation(tempLocation);
+                  setMapOpen(false);
+                }} 
+                className="px-6 py-2 rounded-full font-label-lg bg-primary text-on-primary hover:bg-primary/90"
+              >
+                Confirm Location
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
