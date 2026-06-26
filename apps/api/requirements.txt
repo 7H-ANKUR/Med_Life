@@ -17,3 +17,5 @@ slowapi==0.1.9
 redis==5.0.6
 python-dotenv==1.0.1
 sentry-sdk[fastapi]==2.6.0
+aiohttp
+apify-client

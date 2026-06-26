@@ -13,7 +13,7 @@ from config import settings
 # ─── Load CSV Mappings ────────────────────────────────────
 # Path relative to the api/ directory
 _CSV_PATH = os.path.join(
-    os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))),
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
     "dataset", "symptom_specialist_mappings.csv"
 )
 

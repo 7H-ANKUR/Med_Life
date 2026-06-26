@@ -11,7 +11,7 @@ from collections import defaultdict
 # Add api to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../apps/api"))
 
-DATASET_PATH = os.path.join(os.path.dirname(__file__), "../dataset/docter.csv")
+DATASET_PATH = os.path.join(os.path.dirname(__file__), "../apps/api/dataset/docter.csv")
 
 # ─── Specialist Normalization Map ─────────────────────────
 SPECIALTY_MAP = {
