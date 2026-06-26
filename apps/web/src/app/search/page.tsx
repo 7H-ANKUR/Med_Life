@@ -46,6 +46,7 @@ export default function SearchPage() {
         })
         .catch(err => console.error('Geocoding failed:', err));
     } else {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLocationName('');
     }
   }, [userLocation]);

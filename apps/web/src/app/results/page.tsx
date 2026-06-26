@@ -13,7 +13,7 @@ const URGENCY_COLOR: Record<string, string> = {
   low: 'text-green-600 bg-green-50 border-green-200',
 };
 
-function ProviderCard({ p }: { p: any }) {
+function ProviderCard({ p, onClick }: { p: any, onClick?: () => void }) {
   const [phone, setPhone] = useState<string | null>(p.phone || null);
   const [imgLoaded, setImgLoaded] = useState(false);
   const [imgError, setImgError] = useState(false);
@@ -43,7 +43,10 @@ function ProviderCard({ p }: { p: any }) {
     .toUpperCase();
 
   return (
-    <div className="glass glass-edge p-6 rounded-3xl flex flex-col md:flex-row gap-5 group hover:shadow-[0_20px_40px_rgba(43,76,190,0.10)] transition-all">
+    <div 
+      className={`glass glass-edge p-6 rounded-3xl flex flex-col md:flex-row gap-5 group hover:shadow-[0_20px_40px_rgba(43,76,190,0.10)] transition-all ${onClick ? 'cursor-pointer' : ''}`}
+      onClick={() => onClick && onClick()}
+    >
       {/* Doctor/Clinic Image */}
       <div className="w-full md:w-44 h-44 rounded-2xl overflow-hidden shrink-0 relative bg-primary/10 flex items-center justify-center">
         {photoUrl ? (
@@ -116,7 +119,7 @@ function ProviderCard({ p }: { p: any }) {
 
         <div className="mt-5 flex flex-wrap gap-3">
           <button
-            onClick={() => { if (p.maps_url) window.open(p.maps_url, '_blank'); }}
+            onClick={(e) => { e.stopPropagation(); if (p.maps_url) window.open(p.maps_url, '_blank'); }}
             className="px-6 py-2.5 bg-primary text-white rounded-full font-label-lg text-label-lg hover:shadow-lg hover:shadow-primary/30 transition-all active:scale-95 flex items-center gap-2"
           >
             <span className="material-symbols-outlined text-sm">map</span>
@@ -125,6 +128,7 @@ function ProviderCard({ p }: { p: any }) {
           {phone && phone !== 'Contact Clinic directly' && (
             <a
               href={`tel:${phone}`}
+              onClick={(e) => e.stopPropagation()}
               className="px-6 py-2.5 glass border border-primary/20 text-primary rounded-full font-label-lg text-label-lg hover:bg-primary/5 transition-all active:scale-95 flex items-center gap-2"
             >
               <span className="material-symbols-outlined text-sm">call</span>
@@ -142,7 +146,31 @@ export default function ResultsPage() {
   const [providers, setProviders] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [selectedProvider, setSelectedProvider] = useState<any>(null);
+  const [modalData, setModalData] = useState<any>(null);
+  const [isModalLoading, setIsModalLoading] = useState(false);
   const router = useRouter();
+
+  // Fetch full details when a provider is selected
+  useEffect(() => {
+    if (!selectedProvider) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setModalData(null);
+      return;
+    }
+    let mounted = true;
+    setIsModalLoading(true);
+    placesService.detail(selectedProvider.place_id).then(res => {
+      if (mounted) {
+        setModalData(res.data);
+        setIsModalLoading(false);
+      }
+    }).catch(err => {
+      console.error(err);
+      if (mounted) setIsModalLoading(false);
+    });
+    return () => { mounted = false; };
+  }, [selectedProvider]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -364,7 +392,7 @@ export default function ResultsPage() {
             <div className="glass rounded-3xl p-12 text-center">
               <span className="material-symbols-outlined text-5xl text-on-surface-variant mb-4 block">search_off</span>
               <h3 className="font-headline-md text-headline-md text-on-surface mb-2">No Providers Found</h3>
-              <p className="text-on-surface-variant mb-6">We couldn't find any {specialist}s near your location.</p>
+              <p className="text-on-surface-variant mb-6">We couldn&apos;t find any {specialist}s near your location.</p>
               <Link
                 href="/search"
                 className="bg-primary text-white px-8 py-3 rounded-full font-label-lg inline-flex items-center gap-2 hover:shadow-lg transition-all"
@@ -375,7 +403,7 @@ export default function ResultsPage() {
             </div>
           ) : (
             <div className="space-y-5">
-              {providers.map((p, i) => <ProviderCard key={i} p={p} />)}
+              {providers.map((p, i) => <ProviderCard key={i} p={p} onClick={() => setSelectedProvider(p)} />)}
             </div>
           )}
         </section>
@@ -395,6 +423,105 @@ export default function ResultsPage() {
           </div>
         )}
       </main>
+
+      {/* ── Clinic Details Modal ── */}
+      {selectedProvider && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6">
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setSelectedProvider(null)} />
+          <div className="relative w-full max-w-3xl bg-surface rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-outline-variant shrink-0">
+              <h3 className="font-headline-sm text-headline-sm text-on-surface truncate pr-4">{selectedProvider.name}</h3>
+              <button onClick={() => setSelectedProvider(null)} className="p-2 hover:bg-on-surface/5 rounded-full transition-colors shrink-0">
+                <span className="material-symbols-outlined">close</span>
+              </button>
+            </div>
+            
+            <div className="flex-1 overflow-y-auto p-6">
+              {isModalLoading ? (
+                <div className="flex flex-col items-center justify-center py-12">
+                  <span className="material-symbols-outlined text-primary text-4xl animate-spin mb-4">progress_activity</span>
+                  <p className="text-on-surface-variant font-medium">Fetching live details from Google Maps...</p>
+                  <p className="text-sm text-on-surface-variant/70 mt-2">This may take up to 30 seconds to fetch high-quality images and reviews.</p>
+                </div>
+              ) : modalData ? (
+                <div className="space-y-8">
+                  {/* Photos */}
+                  {modalData.photos && modalData.photos.length > 0 && (
+                    <div>
+                      <h4 className="font-label-lg text-label-lg text-on-surface-variant mb-3">Photos</h4>
+                      <div className="flex gap-3 overflow-x-auto pb-2 snap-x">
+                        {modalData.photos.map((photo: string, idx: number) => (
+                          <div key={idx} className="w-64 h-48 rounded-2xl shrink-0 snap-start bg-cover bg-center" style={{ backgroundImage: `url(${photo})` }} />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {/* Info */}
+                    <div className="space-y-4">
+                      <h4 className="font-label-lg text-label-lg text-on-surface-variant">Contact & Location</h4>
+                      <div className="flex items-start gap-3">
+                        <span className="material-symbols-outlined text-primary">location_on</span>
+                        <p className="text-body-md text-on-surface">{modalData.address}</p>
+                      </div>
+                      {modalData.phone && modalData.phone !== 'Contact Clinic directly' && (
+                        <div className="flex items-center gap-3">
+                          <span className="material-symbols-outlined text-primary">call</span>
+                          <a href={`tel:${modalData.phone}`} className="text-primary hover:underline text-body-md">{modalData.phone}</a>
+                        </div>
+                      )}
+                      {modalData.website && (
+                        <div className="flex items-center gap-3">
+                          <span className="material-symbols-outlined text-primary">language</span>
+                          <a href={modalData.website} target="_blank" rel="noreferrer" className="text-primary hover:underline text-body-md truncate">{modalData.website}</a>
+                        </div>
+                      )}
+                    </div>
+                    
+                    {/* Reviews */}
+                    <div>
+                      <h4 className="font-label-lg text-label-lg text-on-surface-variant mb-3">Recent Reviews</h4>
+                      {modalData.reviews && modalData.reviews.length > 0 ? (
+                        <div className="space-y-4">
+                          {modalData.reviews.slice(0, 3).map((r: any, idx: number) => (
+                            <div key={idx} className="bg-surface-container-low p-4 rounded-2xl">
+                              <div className="flex items-center gap-2 mb-2">
+                                <span className="font-medium text-sm text-on-surface">{r.name}</span>
+                                <div className="flex items-center gap-0.5 text-amber-500">
+                                  <span className="material-symbols-outlined text-[14px]">star</span>
+                                  <span className="text-xs font-bold">{r.rating}</span>
+                                </div>
+                              </div>
+                              <p className="text-body-sm text-on-surface-variant line-clamp-3">{r.text}</p>
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <p className="text-body-sm text-on-surface-variant">No reviews available.</p>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="text-center py-8 text-error">Failed to load details.</div>
+              )}
+            </div>
+            
+            <div className="p-4 border-t border-outline-variant bg-surface flex justify-end shrink-0 gap-3">
+              <button onClick={() => setSelectedProvider(null)} className="px-6 py-2 rounded-full font-label-lg text-on-surface-variant hover:bg-on-surface/5 transition-colors">
+                Close
+              </button>
+              {modalData?.maps_url && (
+                <a href={modalData.maps_url} target="_blank" rel="noreferrer" className="px-6 py-2 bg-primary text-white rounded-full font-label-lg flex items-center gap-2 hover:bg-primary/90 transition-colors">
+                  <span className="material-symbols-outlined text-sm">directions</span>
+                  Get Directions
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
